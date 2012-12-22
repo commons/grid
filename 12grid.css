@@ -1,0 +1,24 @@
+/* clearfix solution */
+.colgroup:before, .colgroup:after { content: "\0020"; display: block; height: 0; overflow: hidden; }
+.colgroup:after { clear: both; }
+.colgroup { zoom: 1; }
+
+.col1, .col2, .col3, .col4, .col5, .col6 {
+	float:left; 
+}
+
+.colgroup section, .colgroup .column { 
+	/* padding: @padding-med; */
+}
+ 
+.colgroup .content {
+	/* padding: @padding-med; */
+}
+
+.col1 { width:100%; }
+.col2 { width:75%  }
+.col3 { width:50%; }
+.col4 { width:33.333%; }
+.col5 { width: 25%; }
+.col6 { width: 16.666%; }
+.col7 { width: 8.333%; }
