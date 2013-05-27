@@ -1,0 +1,11 @@
+{
+  "name": "common.grid",
+  "version": "0.1.0",
+  "main": "./12grid.css",
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/commons/grid.git"
+  },
+
+  "dependencies": {}
+}
