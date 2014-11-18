@@ -1,0 +1,69 @@
+.colgroup {
+	zoom: 1;
+	margin-left: -@margin;
+	margin-right: -@margin;
+}
+
+/* clearfix solution */
+.colgroup:before, .colgroup:after { content: "\0020"; display: block; height: 0; overflow: hidden; }
+.colgroup:after { clear: both; }
+
+.col {
+/*.col-1, .col-2, .col-3, .col-4, .col-5, .col-6, .col-7, .col-8, .col-9, .col-10, .col-11, .col-12 {*/
+	position: relative;
+	min-height: 1px;
+	padding-left: @padding;
+	padding-right: @padding;
+	float:left;
+}
+
+/* decimal grid */
+.col-pct-10 { .col; width: 10%; }
+.col-pct-20 { .col; width: 20%; }
+.col-pct-30 { .col; width: 30%; }
+.col-pct-40 { .col; width: 40%; }
+.col-pct-50 { .col; width: 50%; }
+.col-pct-60 { .col; width: 60%; }
+.col-pct-70 { .col; width: 70%; }
+.col-pct-80 { .col; width: 80%; }
+.col-pct-90 { .col; width: 90%; }
+.col-pct-100 { .col; width: 100%; }
+
+/* 12 base grid */
+.col-1 { .col; width: 8.33333333%; }
+.col-2 { .col; width: 16.66666667%; }
+.col-3 { .col; width: 25%; }
+.col-4 { .col; width: 33.33333333%; }
+.col-5 { .col; width: 41.66666667%; }
+.col-6 { .col; width: 50%; }
+.col-7 { .col; width: 58.33333333%; }
+.col-8 { .col; width: 66.66666667%; }
+.col-9 { .col; width: 75%; }
+.col-10 { .col; width: 83.33333333%; }
+.col-11 { .col; width: 91.66666667%; }
+.col-12 { .col; width: 100%; }
+
+/* alias group 1 */
+.q1 { .col-3 }
+.q2 { .col-6 }
+.q3 { .col-9 }
+.q4 { .col-12 }
+
+/* alias group 2 */
+.quarter { .col-3 }
+.half { .col-6 }
+.full { .col-12 }
+
+/* example usage */
+@media screen and (min-width: @mq_l) and (max-width: @mq_xl) {
+	.main.grid-collapsible {
+		.quarter
+	}
+}
+
+@media screen and (min-width: @mq_xxl) {
+	.main.grid-collapsible {
+		.full
+	}
+}
+
